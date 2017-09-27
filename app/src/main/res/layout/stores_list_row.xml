@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.codepan.widget.CodePanLabel
+            android:id="@+id/tvHeader"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="@color/theme_pri"
+            android:textSize="@dimen/dp20"
+            codePan:typeface="@string/proxima_nova_bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginStart="@dimen/dp30"
+            android:background="@color/theme_pri"/>
+
+    </RelativeLayout>
+
+    <com.codepan.widget.CodePanLabel
+        android:id="@+id/tvStoreName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp30"
+        android:background="@drawable/state_rect_trans_dark"
+        android:text="ABC Store"
+        android:textColor="@color/gray_pri"
+        android:textSize="@dimen/dp17"
+        codePan:typeface="@string/proxima_nova_light"/>
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp30"
+        android:background="@color/divider"/>
+
+</LinearLayout>

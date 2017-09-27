@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivBgBreakTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_trans_forty">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.codepan.widget.CodePanLabel
+                android:id="@+id/tvTitleBreakTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp50"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp27"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+            <ImageView
+                android:layout_width="@dimen/dp79"
+                android:layout_height="@dimen/dp83"
+                android:layout_marginBottom="@dimen/dp10"
+                android:src="@drawable/ic_coffee"/>
+
+            <com.codepan.widget.CodePanLabel
+                android:id="@+id/tvMessageBreakTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp18"
+                android:gravity="center"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+            <com.codepan.widget.CodePanLabel
+                android:id="@+id/tvTimeBreakTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp35"
+                android:layout_marginTop="@dimen/dp35"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp18"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+            <com.codepan.widget.CodePanLabel
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/finish_press_done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_light"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnDoneBreakTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/state_rect_theme_sec_rad_five"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp40"
+                android:paddingEnd="@dimen/dp40"
+                android:paddingRight="@dimen/dp40"
+                android:paddingStart="@dimen/dp40"
+                android:text="@string/done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_mid"/>
+
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

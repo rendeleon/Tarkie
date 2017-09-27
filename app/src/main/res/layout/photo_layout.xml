@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llHeaderPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header"
+        android:background="@color/theme_pri">
+
+        <FrameLayout
+            android:layout_width="@dimen/header"
+            android:layout_height="@dimen/header">
+
+            <ImageView
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp16"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnBackPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/state_rect_trans_dark"/>
+
+        </FrameLayout>
+
+        <com.codepan.widget.CodePanLabel
+            android:id="@+id/tvTitlePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/header"
+            android:layout_marginRight="@dimen/header"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp18"
+            codePan:typeface="@string/proxima_nova_light"/>
+
+    </LinearLayout>
+
+    <com.codepan.widget.TouchImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llFooterPhoto"
+        android:layout_below="@+id/llHeaderPhoto"
+        android:scaleType="fitCenter"/>
+
+    <LinearLayout
+        android:id="@+id/llFooterPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/gray_qui">
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnRetakePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/state_rect_trans_dark"
+                android:text="@string/retake"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_light"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/theme_sec">
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnUsePhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/state_rect_trans_dark"
+                android:text="@string/use_photo"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_light"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

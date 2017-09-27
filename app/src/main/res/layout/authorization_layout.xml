@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_bg_sec"/>
+
+    <ImageView
+        android:layout_width="@dimen/dp112"
+        android:layout_height="@dimen/dp50"
+        android:layout_above="@+id/llAuthorization"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_logo"/>
+
+    <LinearLayout
+        android:id="@+id/llAuthorization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp46"
+        android:layout_marginStart="@dimen/dp46"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/bg_rect_white_rad_ten"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp22"
+        android:paddingEnd="@dimen/dp16"
+        android:paddingLeft="@dimen/dp16"
+        android:paddingRight="@dimen/dp16"
+        android:paddingStart="@dimen/dp16"
+        android:paddingTop="@dimen/dp22">
+
+        <com.codepan.widget.CodePanTextField
+            android:id="@+id/etAuthCodeAuthorize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/state_rect_gray_sen_rad_five"
+            android:gravity="center"
+            android:hint="@string/authorization_code"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:padding="@dimen/dp9"
+            android:textColor="@color/gray_pri"
+            android:textSize="@dimen/dp19"
+            codePan:autoHideKeyboard="true"
+            codePan:typeface="@string/proxima_nova_semi_bold"/>
+
+        <com.codepan.widget.CodePanButton
+            android:id="@+id/btnAuthorize"
+            android:layout_width="@dimen/dp132"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp22"
+            android:background="@drawable/state_rect_theme_sec_rad_five"
+            android:padding="@dimen/dp9"
+            android:text="@string/authorize"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp19"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

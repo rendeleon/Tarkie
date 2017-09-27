@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_bg"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginStart="@dimen/dp30"
+        android:background="@drawable/bg_rect_white_rad_ten"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+        <com.codepan.widget.CodePanLabel
+            android:id="@+id/tvTitleSelectStore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/select_store_caps"
+            android:textAllCaps="true"
+            android:textColor="@color/gray_pri"
+            android:textSize="@dimen/dp17"
+            codePan:typeface="@string/proxima_nova_light"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="@drawable/bg_rect_gray_sec_rad_three">
+
+            <ImageView
+                android:layout_width="@dimen/dp17"
+                android:layout_height="@dimen/dp13"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:src="@drawable/ic_dropdown"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnNameSelectStore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/state_rect_trans_rad_three"
+                android:gravity="start"
+                android:paddingBottom="@dimen/dp11"
+                android:paddingEnd="@dimen/dp47"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp47"
+                android:paddingStart="@dimen/dp10"
+                android:paddingTop="@dimen/dp11"
+                android:textColor="@color/gray_pri"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp15"
+            android:orientation="horizontal">
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnCancelSelectStore"
+                android:layout_width="@dimen/dp120"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:background="@drawable/state_rect_gray_qui_rad_five"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnOKSelectStore"
+                android:layout_width="@dimen/dp120"
+                android:layout_height="wrap_content"
+                android:background="@drawable/state_rect_theme_sec_rad_five"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="@string/ok_caps"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp17"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

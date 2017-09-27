@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.codepan.widget.CodePanLabel
+        android:id="@+id/tvDateVisits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:text="Sep 23, 2017"
+        android:textColor="@color/gray_pri"
+        android:textSize="@dimen/dp17"
+        codePan:typeface="@string/proxima_nova_bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/theme_sec"/>
+
+    <ListView
+        android:id="@+id/lvVisits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/divider"
+        android:dividerHeight="@dimen/dp1"
+        android:listSelector="@drawable/state_rect_trans_dark"
+        android:scrollbarSize="@dimen/scrollbar"
+        android:scrollbarThumbVertical="@color/scrollbar">
+
+    </ListView>
+
+</LinearLayout>

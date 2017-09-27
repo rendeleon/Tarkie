@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_bg"
+    android:clickable="true"
+    android:padding="@dimen/dp30">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_rect_white_rad_ten"
+        android:padding="@dimen/dp15">
+
+        <com.codepan.widget.CodePanLabel
+            android:id="@+id/tvTitleAlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp10"
+            android:gravity="center"
+            android:text="Dialog Title"
+            android:textColor="@color/theme_pri"
+            android:textSize="@dimen/dp19"
+            android:visibility="gone"
+            codePan:typeface="@string/dialog_title_font"/>
+
+        <com.codepan.widget.CodePanLabel
+            android:id="@+id/tvMessageAlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleAlertDialog"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/gray_pri"
+            android:textSize="@dimen/dp18"
+            codePan:typeface="@string/proxima_nova_light"/>
+
+        <LinearLayout
+            android:id="@+id/llButtonAlertDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMessageAlertDialog"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="horizontal">
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnNegativeAlertDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/state_rect_gray_qua_rad_five"
+                android:minWidth="@dimen/dp120"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:paddingTop="@dimen/dp10"
+                android:text="@string/no"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp18"
+                android:visibility="visible"
+                codePan:typeface="@string/proxima_nova_semi_bold"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnPositiveAlertDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginStart="@dimen/dp5"
+                android:background="@drawable/state_rect_theme_sec_rad_five"
+                android:minWidth="@dimen/dp120"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp5"
+                android:paddingRight="@dimen/dp5"
+                android:paddingTop="@dimen/dp10"
+                android:text="@string/yes"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp18"
+                codePan:typeface="@string/proxima_nova_semi_bold"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

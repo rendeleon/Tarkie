@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg_sec"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:id="@+id/ivLogoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp80"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp18"
+        android:layout_marginEnd="@dimen/dp18"
+        android:layout_marginLeft="@dimen/dp18"
+        android:layout_marginRight="@dimen/dp18"
+        android:layout_marginStart="@dimen/dp18"
+        android:layout_marginTop="@dimen/dp36"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ivPoweredBy"
+        android:layout_below="@+id/ivLogoLogin"
+        android:layout_marginEnd="@dimen/dp46"
+        android:layout_marginLeft="@dimen/dp46"
+        android:layout_marginRight="@dimen/dp46"
+        android:layout_marginStart="@dimen/dp46"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_rect_white_rad_ten"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp22"
+            android:paddingEnd="@dimen/dp16"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingStart="@dimen/dp16"
+            android:paddingTop="@dimen/dp22">
+
+            <com.codepan.widget.CodePanTextField
+                android:id="@+id/etUsernameLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp13"
+                android:background="@drawable/state_rect_gray_sen_rad_five"
+                android:gravity="center"
+                android:hint="@string/username"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusDown="@+id/etPasswordLogin"
+                android:padding="@dimen/dp10"
+                android:textColor="@color/gray_pri"
+                android:textSize="@dimen/dp19"
+                codePan:autoHideKeyboard="true"
+                codePan:typeface="@string/proxima_nova_light"/>
+
+            <com.codepan.widget.CodePanTextField
+                android:id="@+id/etPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/state_rect_gray_sen_rad_five"
+                android:gravity="center"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:nextFocusDown="@+id/btnLogin"
+                android:padding="@dimen/dp10"
+                android:textColor="@color/gray_pri"
+                android:textSize="@dimen/dp19"
+                codePan:autoHideKeyboard="true"
+                codePan:typeface="@string/proxima_nova_light"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnLogin"
+                android:layout_width="@dimen/dp116"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp22"
+                android:background="@drawable/state_rect_theme_sec_rad_five"
+                android:padding="@dimen/dp10"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp19"
+                codePan:typeface="@string/proxima_nova_bold"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivPoweredBy"
+        android:layout_width="@dimen/dp95"
+        android:layout_height="@dimen/dp45"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp18"
+        android:background="@drawable/ic_logo_powered_by"
+        android:scaleType="centerInside"/>
+
+</RelativeLayout>

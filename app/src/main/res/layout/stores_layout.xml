@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header"
+        android:background="@color/theme_pri">
+
+        <FrameLayout
+            android:id="@+id/flBackStores"
+            android:layout_width="@dimen/header"
+            android:layout_height="@dimen/header">
+
+            <ImageView
+                android:layout_width="@dimen/dp18"
+                android:layout_height="@dimen/dp18"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back"/>
+
+            <com.codepan.widget.CodePanButton
+                android:id="@+id/btnBackStores"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/state_rect_trans_dark"/>
+
+        </FrameLayout>
+
+        <com.codepan.widget.CodePanLabel
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/flBackStores"
+            android:layout_toLeftOf="@+id/btnAddStores"
+            android:layout_toRightOf="@+id/flBackStores"
+            android:layout_toStartOf="@+id/btnAddStores"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/stores"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp18"
+            codePan:typeface="@string/proxima_nova_light"/>
+
+        <com.codepan.widget.CodePanButton
+            android:id="@+id/btnAddStores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:background="@drawable/state_rect_white_radius_three"
+            android:paddingBottom="@dimen/dp2"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp2"
+            android:text="@string/add"
+            android:textColor="@color/theme_pri"
+            android:textSize="@dimen/dp13"
+            codePan:typeface="@string/proxima_nova_light"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp15"
+        android:background="@drawable/bg_rect_gray_sec_rad_three">
+
+        <com.codepan.widget.CodePanTextField
+            android:id="@+id/esSearchStores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/state_rect_trans_rad_three"
+            android:hint="@string/search"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingEnd="@dimen/dp30"
+            android:paddingLeft="@dimen/dp10"
+            android:paddingRight="@dimen/dp30"
+            android:paddingStart="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:textColor="@color/gray_pri"
+            android:textSize="@dimen/dp17"
+            codePan:autoHideKeyboard="true"
+            codePan:typeface="@string/proxima_nova_light"/>
+
+        <ImageView
+            android:id="@+id/ivSearchStores"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp21"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/ic_search_dark"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@color/divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lvStores"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/transparent"
+            android:scrollbarSize="@dimen/scrollbar"
+            android:scrollbarThumbVertical="@color/scrollbar"/>
+
+        <ImageView
+            android:id="@+id/ivLoadingStores"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_loading"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rlMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circular="http://schemas.android.com/tools"
+    xmlns:codePan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/dlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rlHeaderMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/theme_pri">
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp14"
+                            android:layout_height="@dimen/dp14"
+                            android:src="@drawable/ic_menu"/>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="@string/menu"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp18"/>
+
+                    </LinearLayout>
+
+                    <com.codepan.widget.CodePanButton
+                        android:id="@+id/btnMenuMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/state_rect_trans_dark"/>
+
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlSyncMain"
+                        android:layout_width="@dimen/header"
+                        android:layout_height="@dimen/header"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp27"
+                            android:layout_height="@dimen/dp19"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_sync"/>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvSyncMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/dp2"
+                            android:layout_marginRight="@dimen/dp2"
+                            android:layout_marginTop="@dimen/dp14"
+                            android:background="@drawable/bg_oval_red_pri"
+                            android:gravity="center"
+                            android:padding="@dimen/dp1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp10"
+                            android:visibility="gone"
+                            codePan:reference="dynamic"
+                            codePan:setSquare="true"
+                            codePan:typeface="@string/proxima_nova_bold"/>
+
+                        <com.codepan.widget.CodePanButton
+                            android:id="@+id/btnSyncMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/state_rect_trans_dark"/>
+
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:id="@+id/flAddVisitMain"
+                        android:layout_toEndOf="@+id/rlSyncMain"
+                        android:layout_toRightOf="@+id/rlSyncMain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/header"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10">
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvAddVisitMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/state_rect_white_radius_three"
+                            android:paddingBottom="@dimen/dp2"
+                            android:paddingEnd="@dimen/dp15"
+                            android:paddingLeft="@dimen/dp15"
+                            android:paddingRight="@dimen/dp15"
+                            android:paddingStart="@dimen/dp15"
+                            android:paddingTop="@dimen/dp2"
+                            android:text="@string/add_visit"
+                            android:textColor="@color/theme_pri"
+                            android:textSize="@dimen/dp13"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                        <com.codepan.widget.CodePanButton
+                            android:id="@+id/btnAddVisitMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"/>
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/flContainerMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llTabMain"
+                android:layout_below="@+id/rlHeaderMain">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_bg_pri"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/llTabMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp60"
+                android:layout_alignParentBottom="true"
+                android:background="@color/theme_pri"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/flHomeMain"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/vHomeMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_trans_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp30">
+
+                            <ImageView
+                                android:id="@+id/ivHomeMain"
+                                android:layout_width="@dimen/dp33"
+                                android:layout_height="@dimen/dp27"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:src="@drawable/ic_home"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvHomeMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:text="@string/tab_home"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp12"
+                            codePan:typeface="@string/proxima_nova_mid"/>
+
+                    </LinearLayout>
+
+                    <com.codepan.widget.CodePanButton
+                        android:id="@+id/btnHomeMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/state_rect_trans_dark"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flVisitMain"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/vVisitMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black_trans_ten"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp30">
+
+                            <ImageView
+                                android:id="@+id/ivVisitMain"
+                                android:layout_width="@dimen/dp33"
+                                android:layout_height="@dimen/dp27"
+                                android:layout_gravity="center_horizontal|bottom"
+                                android:src="@drawable/ic_visits"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvVisitMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:text="@string/tab_visit"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp12"
+                            codePan:typeface="@string/proxima_nova_mid"/>
+
+                    </LinearLayout>
+
+                    <com.codepan.widget.CodePanButton
+                        android:id="@+id/btnVisitMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/state_rect_trans_dark"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMenuMain"
+            android:layout_width="@dimen/dp270"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:clickable="true">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbarSize="@dimen/dp3"
+                android:scrollbarThumbVertical="@color/black_trans_forty">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/theme_pri"
+                        android:paddingBottom="@dimen/dp7"
+                        android:paddingEnd="@dimen/dp15"
+                        android:paddingLeft="@dimen/dp15"
+                        android:paddingRight="@dimen/dp15"
+                        android:paddingStart="@dimen/dp15"
+                        android:paddingTop="@dimen/dp15">
+
+                        <com.codepan.widget.CircularImageView
+                            android:id="@+id/ivEmployeeMain"
+                            android:layout_width="@dimen/dp50"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/ic_user_placeholder"
+                            circular:borderWidth="3"/>
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp50"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/bg_rect_white_rad_three"
+                            android:padding="@dimen/dp7">
+
+                            <ImageView
+                                android:id="@+id/ivLogoMain"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerInside"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvEmployeeNameMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivEmployeeMain"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp16"
+                            codePan:typeface="@string/proxima_nova_mid"/>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvEmployeeNoMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvEmployeeNameMain"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dp13"
+                            codePan:typeface="@string/proxima_nova_mid"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llTimeInMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivTimeInMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_time_in"
+                                android:visibility="visible"/>
+
+                            <ImageView
+                                android:id="@+id/ivTimeOutMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_time_out"
+                                android:visibility="gone"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvTimeInMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="Time Out"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/llBreaksMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivBreaksMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_breaks"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvBreaksMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="Breaks"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/llStoresMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivStoresMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_stores"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvStoresMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="Stores"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/llUpdateMasterfileMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivUpdateMasterfileMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_update_master_file"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvUpdateMasterfileMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="Update Masterfile"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/llSendBackupMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivSendBackupMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_send_back_up"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvSendBackupMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="Send Back-up Data"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/llAboutMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivAboutMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_about"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvAboutMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="About"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                    <LinearLayout
+                        android:id="@+id/llLogoutMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/state_rect_trans_dark"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp10">
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25">
+
+                            <ImageView
+                                android:id="@+id/ivLogoutMain"
+                                android:layout_width="@dimen/dp20"
+                                android:layout_height="@dimen/dp20"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_menu_logout"/>
+
+                        </FrameLayout>
+
+                        <com.codepan.widget.CodePanLabel
+                            android:id="@+id/tvLogoutMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:layout_marginStart="@dimen/dp5"
+                            android:text="Log-out"
+                            android:textColor="@color/gray_pri"
+                            android:textSize="@dimen/dp17"
+                            codePan:typeface="@string/proxima_nova_light"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp1"
+                        android:background="@color/divider"/>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
